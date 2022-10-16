@@ -6,7 +6,8 @@ export default function Text(props) {
         fontWeight: props.weight,
         fontSize: props.size + 'px',
         letterSpacing: props.spacing + 'px',
-        textAlign: props.align
+        textAlign: 'center',
+        width: '100%'
       }}
     >
       {props.value}

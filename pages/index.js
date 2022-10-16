@@ -22,6 +22,12 @@ export default function Home() {
 
         <div className={styles.page}>
         <Menu />
+        <div className={styles.app}>
+<Text value="Insira seu nome de usuário
+do GitHub" align="center" color="white" size="48" weight="700"/>
+          
+        </div>
+
         </div>
       </div>
     </>
