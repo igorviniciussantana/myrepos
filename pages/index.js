@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function Home() {
 
-const [name, setName] = useState('')
+  const [name, setName] = useState("");
 
   return (
     <>
@@ -33,14 +33,14 @@ const [name, setName] = useState('')
 do GitHub"
               align="center"
               color="white"
-              minSize="1.5" mediumSize="5"
+              minSize="1.5"
+              mediumSize="5"
               weight="700"
             />
-            <Input placeholder="meu-usuario" change={(ev) => setName(ev)}/>
+            <Input placeholder="meu-usuario" change={(ev) => setName(ev)} />
             {console.log(name)}
-            <Button value="Acessar minha página" />
+            <Button value="Acessar minha página" click={name}/>
           </div>
-          
         </div>
       </div>
     </>
