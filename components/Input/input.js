@@ -1,8 +1,8 @@
-export default function Input() {
+import styles from "./input.module.css";
+
+export default function Input(props) {
     return (
-      <div>
-  
-      </div>
+    <input placeholder={props.placeholder} className={styles.input}/>
     )
   }
   

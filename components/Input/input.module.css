@@ -1,0 +1,16 @@
+.input {
+  width: 80%;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+.input::-moz-placeholder {
+  color: #646464;
+}
+.input:-ms-input-placeholder {
+  color: #646464;
+}
+.input::placeholder {
+  color: #646464;
+}/*# sourceMappingURL=input.module.css.map */

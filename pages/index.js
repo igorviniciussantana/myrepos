@@ -4,6 +4,7 @@ import Text from "../components/Text/text";
 import Image from "next/image";
 import Menu from "../components/Menu/menu";
 import Button from "../components/Button/button";
+import Input from "../components/Input/input";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ do GitHub"
               minSize="1.5" mediumSize="5"
               weight="700"
             />
+            <Input placeholder="meu-usuario"/>
             <Button value="Acessar minha página" />
           </div>
         </div>

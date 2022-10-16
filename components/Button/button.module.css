@@ -4,4 +4,11 @@
   padding: 0.5rem 0;
   border-radius: 4px;
   background-color: #52FB02;
+  transition: 0.5s;
+}
+.button:hover {
+  background-color: #48d606;
+  cursor: pointer;
+  transition: 0.5s;
+  transform: scale(1.02);
 }/*# sourceMappingURL=button.module.css.map */
