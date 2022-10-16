@@ -1,3 +1,13 @@
+@media (min-width: 450px) {
+  .app {
+    width: 50%;
+  }
+}
+@media (max-width: 450px) {
+  .app {
+    width: 90%;
+  }
+}
 .container {
   width: 100vw;
   height: 100vh;
@@ -26,8 +36,6 @@
   align-items: center;
 }
 .container .page .app {
-  min-width: 50%;
-  max-width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
