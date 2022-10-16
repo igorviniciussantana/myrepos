@@ -40,10 +40,11 @@ $background-color: #100f11;
     align-items: center;
 
     .app {
-      // width: clamp(80%, 50vw, 100%);
+     
       height: 100%;
       display: flex;
       flex-direction: column;
+      row-gap: 12px;
       justify-content: center;
       align-items: center;
     }
