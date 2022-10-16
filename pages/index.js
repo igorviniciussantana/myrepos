@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Text from "../components/Text/text";
 import Image from "next/image";
+import Menu from "../components/Menu/menu";
 
 export default function Home() {
   return (
@@ -18,6 +19,10 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <div className={styles.bgImage}></div>
+
+        <div className={styles.page}>
+        <Menu />
+        </div>
       </div>
     </>
   );
