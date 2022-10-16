@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Text from "../components/Text/text";
 import Image from "next/image";
 import Menu from "../components/Menu/menu";
+import Button from "../components/Button/button";
 
 export default function Home() {
   return (
@@ -21,13 +22,18 @@ export default function Home() {
         <div className={styles.bgImage}></div>
 
         <div className={styles.page}>
-        <Menu />
-        <div className={styles.app}>
-<Text value="Insira seu nome de usuário
-do GitHub" align="center" color="white" size="48" weight="700"/>
-          
-        </div>
-
+          <Menu />
+          <div className={styles.app}>
+            <Text
+              value="Insira seu nome de usuário
+do GitHub"
+              align="center"
+              color="white"
+              size="48"
+              weight="700"
+            />
+            <Button value="Acessar minha página" />
+          </div>
         </div>
       </div>
     </>
