@@ -7,7 +7,7 @@ export default function Button(props) {
   const router = useRouter()
 
     return (
-     <button className={styles.button} onClick={() => router.push(`users/${props.name}`)}>
+     <button className={styles.button} onClick={() => router.push(`users/${props.click}`)}>
 
 
       <Text value={props.value} color="#100F11" size="1" weight="700"/>
