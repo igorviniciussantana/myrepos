@@ -1,7 +1,14 @@
-export default function Text() {
+export default function Text(props) {
   return (
-    <div>
-
-    </div>
-  )
+    <span
+      style={{
+        color: props.color,
+        fontWeight: props.weight,
+        fontSize: props.size + 'px',
+        letterSpacing: props.spacing + 'px',
+      }}
+    >
+      {props.value}
+    </span>
+  );
 }
