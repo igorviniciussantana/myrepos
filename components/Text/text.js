@@ -4,7 +4,7 @@ export default function Text(props) {
       style={{
         color: props.color,
         fontWeight: props.weight,
-        fontSize: `clamp(1rem, ${props.size}vw, 3rem)`,
+        fontSize: `clamp(${props.minSize}rem, ${props.mediumSize}vw, 3rem)`,
         letterSpacing: props.spacing + 'px',
         textAlign: 'center',
         width: '100%'

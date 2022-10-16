@@ -29,7 +29,7 @@ export default function Home() {
 do GitHub"
               align="center"
               color="white"
-              size="48"
+              minSize="1.5" mediumSize="5"
               weight="700"
             />
             <Button value="Acessar minha página" />

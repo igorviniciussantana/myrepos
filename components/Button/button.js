@@ -6,7 +6,7 @@ export default function Button(props) {
      <button className={styles.button}>
 
 
-      <Text value={props.value} color="#100F11" size="16" weight="700"/>
+      <Text value={props.value} color="#100F11" size="1" weight="700"/>
      </button>
     )
   }

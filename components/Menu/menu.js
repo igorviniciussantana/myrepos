@@ -7,12 +7,12 @@ export default function Menu() {
     <div className={styles.menu}>
       <Link href="/">
         <a>
-          <Text value="MyRepos" color="white" weight="900" size="32" />
+          <Text value="MyRepos" color="white" weight="900" minSize="1" mediumSize="3" />
         </a>
       </Link>
       <Link href="https://github.com/igorviniciussantana/myrepos">
         <a target="_blank">
-          <Text value="repositório" color="white" weight="400" size="16" />
+          <Text value="repositório" color="white" weight="400" minSize="0.8" mediumSize="1.3"  />
         </a>
       </Link>
     </div>
