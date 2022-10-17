@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useEffect } from "react";
+import Head from "next/head";
 
 export default function User() {
   const router = useRouter();
@@ -22,5 +23,17 @@ export default function User() {
   });
 
 
-  return (<h1>{user.login}</h1>);
+  return (
+  <>
+  <Head>
+    <title>{user.login} | MyRepos</title>
+    <link rel="icon" href="/images/favicon.svg" type="image/svg" />
+    <meta
+          name="description"
+          content={"Conheça os repositórios de " + user.login + " " + "no GitHub!"}
+        />
+  </Head>
+  <h1>{user.login}</h1>
+  </>
+  );
 }
