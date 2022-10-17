@@ -2,10 +2,11 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { useEffect } from "react";
 import Head from "next/head";
+import Header from "../../components/Header/header";
 
 export default function User() {
   const router = useRouter();
-  const  userName  = router.query.user;
+  const userName = router.query.user;
 
   const [user, setUser] = useState({ userName });
   const [repos, setRepos] = useState([]);
@@ -22,18 +23,19 @@ export default function User() {
       .then((reposData) => setRepos(reposData));
   });
 
-
   return (
-  <>
-  <Head>
-    <title>{user.login} | MyRepos</title>
-    <link rel="icon" href="/images/favicon.svg" type="image/svg" />
-    <meta
+    <>
+      <Head>
+        <title>{user.login} | MyRepos</title>
+        <link rel="icon" href="/images/favicon.svg" type="image/svg" />
+        <meta
           name="description"
-          content={"Conheça os repositórios de " + user.login + " " + "no GitHub!"}
+          content={
+            "Conheça os repositórios de " + user.login + " " + "no GitHub!"
+          }
         />
-  </Head>
-  <h1>{user.login}</h1>
-  </>
+      </Head>
+<Header avatar={user.avatar_url} name={user.name} login={user.login}/>
+    </>
   );
 }
