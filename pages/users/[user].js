@@ -7,7 +7,7 @@ import styles from "../../styles/User.module.css"
 
 export default function User() {
   const router = useRouter();
-  const userName = router.query.user;
+  var userName = router.query.user;
 
   const [user, setUser] = useState({ userName });
   const [repos, setRepos] = useState([]);
@@ -16,13 +16,13 @@ export default function User() {
     fetch(`https://api.github.com/users/${userName}`)
       .then((userResponse) => userResponse.json())
       .then((userData) => setUser(userData));
-  });
+  }, [{userName}]);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${userName}/repos`)
       .then((reposResponse) => reposResponse.json())
       .then((reposData) => setRepos(reposData));
-  });
+  },[{userName}]);
 
   return (
     <>
