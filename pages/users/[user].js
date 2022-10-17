@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Head from "next/head";
 import Header from "../../components/Header/header";
+import styles from "../../styles/User.module.css"
 
 export default function User() {
   const router = useRouter();
@@ -35,7 +36,9 @@ export default function User() {
           }
         />
       </Head>
-<Header avatar={user.avatar_url} name={user.name} login={user.login}/>
+      <div className={styles.containerDynamic}>
+        <Header avatar={user.avatar_url} name={user.name} login={"@" + user.login} />
+      </div>
     </>
   );
 }

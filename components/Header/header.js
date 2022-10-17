@@ -5,14 +5,11 @@ import Image from "next/image";
 
 export default function Header(props) {
   return (
-    <div>
-<div className={styles.image}>
-<img src={props.avatar} />
-<Text value={props.name} />
-<Text value={props.login} />
+    <div className={styles.header}>
 
-</div>
-
+<img src={props.avatar} className={styles.image}/>
+<Text value={props.name} minSize="1.8" mediumSize="3" color="white" weight="700"/>
+<Text value={props.login} minSize="0.8" mediumSize="1.3" color="#646464" weight="500"/>
     </div>
   );
 }
