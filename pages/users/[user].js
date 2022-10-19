@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Head from "next/head";
 import Header from "../../components/Header/header";
+import Menu from "../../components/Menu/menu";
 import styles from "../../styles/User.module.css"
 
 export default function User() {
@@ -37,6 +38,7 @@ export default function User() {
         />
       </Head>
       <div className={styles.containerDynamic}>
+        <Menu />
         <Header avatar={user.avatar_url} name={user.name} login={"@" + user.login} />
       </div>
     </>
