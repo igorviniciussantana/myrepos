@@ -8,6 +8,12 @@ flex-direction: column;
 
 padding: 1rem;
 row-gap: 0.25rem;
+transition: .5s;
+
+&:hover{
+    transform: scale(1.02);
+    transition: .5s;
+}
 .user{
     display: flex;
     min-width: 30%;

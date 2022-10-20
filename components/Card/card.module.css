@@ -7,6 +7,11 @@
   flex-direction: column;
   padding: 1rem;
   row-gap: 0.25rem;
+  transition: 0.5s;
+}
+.card:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
 }
 .card .user {
   display: flex;
