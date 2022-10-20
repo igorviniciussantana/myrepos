@@ -7,6 +7,7 @@
   align-items: center;
 }
 .containerDynamic .cardsDiv {
+  margin-top: 2rem;
   width: 80vw;
   display: flex;
   flex-direction: column;
