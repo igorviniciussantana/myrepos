@@ -40,11 +40,7 @@ export default function User() {
       </Head>
       <div className={styles.containerDynamic}>
         <Menu />
-        <Header
-          avatar={user.avatar_url}
-          name={user.name}
-          login={user.login}
-        />
+        <Header avatar={user.avatar_url} name={user.name} login={user.login} />
         <div className={styles.cardsDiv}>
           {repos.map((repo) => {
             return (
@@ -54,16 +50,13 @@ export default function User() {
                 description={repo.description}
                 img={repo.owner.avatar_url}
                 login={repo.owner.login}
-                tags={repo.topics.slice(0,3)}
+                tags={repo.topics.slice(0, 3)}
                 link={repo.html_url}
               />
-             
             );
           })}
         </div>
       </div>
-     
-
     </>
   );
 }
