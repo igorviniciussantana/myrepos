@@ -43,7 +43,7 @@ export default function User() {
         <Header
           avatar={user.avatar_url}
           name={user.name}
-          login={"@" + user.login}
+          login={user.login}
         />
         <div className={styles.cardsDiv}>
           {repos.map((repo) => {
