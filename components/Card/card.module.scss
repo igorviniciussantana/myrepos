@@ -3,17 +3,20 @@ width: 100%;
 background-color: white;
 border-radius: 0.25rem;
 border-left: 8px solid #52FB02;
-display: flex;
-flex-direction: column;
+position: relative;
 
-padding: 1rem;
-row-gap: 0.25rem;
 transition: .5s;
 
 &:hover{
     transform: scale(1.008);
     transition: .5s;
 }
+.info{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+row-gap: 0.25rem;
+
 .user{
     display: flex;
     min-width: 30%;
@@ -50,8 +53,16 @@ color: black;
 }
 
 }
-
+}
 }
 
+.decoration{
+position: absolute;
+z-index: 1;
+height: 100%;
+right: 0;
+top: 0;
+
+}
 
 }
