@@ -6,7 +6,7 @@ export default function Text(props) {
         fontWeight: props.weight,
         fontSize: `clamp(${props.minSize}rem, ${props.mediumSize}vw, 3rem)`,
         letterSpacing: props.spacing + 'px',
-        textAlign: 'center',
+        textAlign: props.align,
         width: '100%'
       }}
     >

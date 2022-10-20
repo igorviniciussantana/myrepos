@@ -9,11 +9,11 @@ export default function Card(props) {
     return (
 <div className={styles.card}>
 
-<Text value={props.name} />
+<Text value={props.title} />
 <Text value={props.description} />
 <div className={styles.user}>
     <div className={styles.avatar}>
-        <Image layout="fill" src={props.img} />
+        {/* <Image layout="fill" src={props.img} /> */}
     </div>
     <Text value={props.login} />
 </div>
