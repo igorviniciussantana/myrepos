@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import Head from "next/head";
 import Header from "../../components/Header/header";
 import Menu from "../../components/Menu/menu";
-import styles from "../../styles/User.module.css"
+import styles from "../../styles/User.module.css";
+import Card from "../../components/Card/card";
 
 export default function User() {
   const router = useRouter();
@@ -17,13 +18,13 @@ export default function User() {
     fetch(`https://api.github.com/users/${userName}`)
       .then((userResponse) => userResponse.json())
       .then((userData) => setUser(userData));
-  }, [{userName}]);
+  }, [{ userName }]);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${userName}/repos`)
       .then((reposResponse) => reposResponse.json())
       .then((reposData) => setRepos(reposData));
-  },[{userName}]);
+  }, [{ userName }]);
 
   return (
     <>
@@ -39,7 +40,26 @@ export default function User() {
       </Head>
       <div className={styles.containerDynamic}>
         <Menu />
-        <Header avatar={user.avatar_url} name={user.name} login={"@" + user.login} />
+        <Header
+          avatar={user.avatar_url}
+          name={user.name}
+          login={"@" + user.login}
+        />
+        <div className={styles.cardsDiv}>
+          {repos.map((repo) => {
+            return (
+              <Card
+                title={repo.name}
+                key={repo.id}
+                description={repo.description}
+                img={repo.owner.avatar_url}
+                login={repo.owner.login}
+                tags={repo.topics}
+                link={repo.html_url}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

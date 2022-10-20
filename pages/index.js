@@ -38,7 +38,6 @@ do GitHub"
               weight="700"
             />
             <Input placeholder="meu-usuario" change={(ev) => setName(ev)} />
-            {console.log(name)}
             <Button value="Acessar minha página" click={name}/>
           </div>
         </div>
