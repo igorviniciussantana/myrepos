@@ -25,8 +25,13 @@ export default function Card(props) {
             <div className={styles.avatar}>
               <img src={props.img} />
             </div>
-            <Text value={"@" + props.login} weight="700" color="#100f11"  minSize="0.6"
-          mediumSize="0.9"/>
+            <Text
+              value={"@" + props.login}
+              weight="700"
+              color="#100f11"
+              minSize="0.6"
+              mediumSize="0.9"
+            />
           </a>
         </Link>
         <div className={styles.tagsDiv}>
@@ -38,10 +43,8 @@ export default function Card(props) {
             );
           })}
         </div>
-    
-       
-            {/* <img src="/images/card_decorator.svg" className={styles.decoration}/> */}
-     
+
+        {/* <img src="/images/card_decorator.svg" className={styles.decoration}/> */}
       </a>
     </Link>
   );

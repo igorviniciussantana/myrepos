@@ -5,9 +5,9 @@ export default function Text(props) {
         color: props.color,
         fontWeight: props.weight,
         fontSize: `clamp(${props.minSize}rem, ${props.mediumSize}vw, 3rem)`,
-        letterSpacing: props.spacing + 'px',
+        letterSpacing: props.spacing + "px",
         textAlign: props.align,
-        width: '100%'
+        width: "100%",
       }}
     >
       {props.value}
