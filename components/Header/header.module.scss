@@ -12,5 +12,13 @@
     width: 30%;
     margin-bottom: 4px;
     cursor: pointer;
+    transition: .5s;
+
+    &:hover{
+        border: 1px solid #4925AF;
+        transition: .5s;
+        transform: rotate(-20deg) scale(1.2);
+
+    }
   }
 }

@@ -12,4 +12,10 @@
   width: 30%;
   margin-bottom: 4px;
   cursor: pointer;
+  transition: 0.5s;
+}
+.header .image:hover {
+  border: 1px solid #4925AF;
+  transition: 0.5s;
+  transform: rotate(-20deg) scale(1.2);
 }/*# sourceMappingURL=header.module.css.map */
