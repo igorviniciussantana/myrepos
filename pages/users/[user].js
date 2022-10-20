@@ -54,7 +54,7 @@ export default function User() {
                 description={repo.description}
                 img={repo.owner.avatar_url}
                 login={repo.owner.login}
-                tags={repo.topics}
+                tags={repo.topics.slice(0,3)}
                 link={repo.html_url}
               />
             );
