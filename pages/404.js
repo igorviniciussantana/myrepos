@@ -14,7 +14,7 @@ export default function Error() {
       <div className={styles.container}>
         <Menu />
         <div className={styles.app}>
-          <img src="/images/error.svg" className={styles.img} />
+          <img src="/images/error_icon.svg" className={styles.img} />
           <div className={styles.title}>
             <Text
               value="error"
