@@ -39,7 +39,7 @@ export default function Error() {
             align="center"
             mediumSize="1"
           />
-          <Button value="Voltar para a Página Inicial"/>
+          <Button value="Voltar para a Página Inicial" click="/"/>
         </div>
       </div>
     </>

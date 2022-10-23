@@ -8,7 +8,7 @@ export default function Button(props) {
   return (
     <button
       className={styles.button}
-      onClick={() => router.push(`users/${props.click}`)}
+      onClick={() => router.push(`${props.click}`)}
     >
       <Text value={props.value} color="#100F11" size="1" weight="700" />
     </button>
