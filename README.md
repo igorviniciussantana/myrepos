@@ -4,7 +4,7 @@
 
 # 🗂 MyRepos
 
-Esse projeto consiste em uma aplicação que retorna todos os repositórios de um usuário, com um design simples, bonito e responsivo. O projeto foi desenvolvido utilizando todo o conceito de commits semânticos.
+Esse projeto consiste em uma aplicação que retorna todos os repositórios de um usuário utilizando a API do GitHub, com um design simples, bonito e responsivo. O projeto foi desenvolvido utilizando todo o conceito de commits semânticos.
 
 ## 🎨 Protótipo
 
