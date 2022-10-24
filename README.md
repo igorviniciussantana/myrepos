@@ -66,7 +66,6 @@ Inicie o servidor
   npm run dev
 ```
 
-
 ## 👤 - Autor
 
 <table>
