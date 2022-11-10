@@ -1,6 +1,5 @@
-import { useRouter } from "next/router";
+import {getStaticPaths, getStaticProps} from 'next'
 import { useState } from "react";
-import { useEffect } from "react";
 import Head from "next/head";
 import Header from "../../components/Header/header";
 import Menu from "../../components/Menu/menu";
@@ -43,6 +42,16 @@ export default function User({user, repos}) {
     </>
   );
 }
+
+
+export const getStaticPaths = async function(){
+ return{
+  paths,
+  fallback: true
+ }
+
+}
+
 
 export const getStaticProps = async function (context) {
   const { userName } = context.params;
