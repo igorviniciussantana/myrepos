@@ -8,25 +8,6 @@ import styles from "../../styles/User.module.css";
 import Card from "../../components/Card/card";
 
 export default function User() {
-  const router = useRouter();
-  var userName = router.query.user;
-
-  const [user, setUser] = useState({ userName });
-  const [repos, setRepos] = useState([]);
-
-  useEffect(() => {
-    fetch(`https://api.github.com/users/${userName}`)
-      .then((userResponse) => userResponse.json())
-      .then((userData) => setUser(userData));
-  }, [{ userName }]);
-
-  useEffect(() => {
-    fetch(`https://api.github.com/users/${userName}/repos`)
-      .then((reposResponse) => reposResponse.json())
-      .then((reposData) => setRepos(reposData));
-  }, [{ userName }]);
-
-  console.log(user);
 
   return (
     <>
