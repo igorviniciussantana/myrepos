@@ -1,12 +1,25 @@
-import {getStaticPaths, getStaticProps} from 'next'
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Header from "../../components/Header/header";
 import Menu from "../../components/Menu/menu";
 import styles from "../../styles/User.module.css";
 import Card from "../../components/Card/card";
+import  api  from "../../api/api";
 
-export default function User({user, repos}) {
+
+
+
+export default function User({ user, repos }) {
+
+  const { isFallback } = useRouter();
+
+  if (isFallback) {
+    return <p>Carregando...</p>;
+  }
+
+const sortRepos = repos.sort((a,b) => {return new Date(b.updated_at) - new Date(a.updated_at)})
+console.log(sortRepos.map(repo => new Date(repo.updated_at)))
 
   return (
     <>
@@ -24,7 +37,7 @@ export default function User({user, repos}) {
         <Menu />
         <Header avatar={user.avatar_url} name={user.name} login={user.login} />
         <div className={styles.cardsDiv}>
-          {repos.map((repo) => {
+          {sortRepos.map((repo) => {
             return (
               <Card
                 title={repo.name}
@@ -43,23 +56,19 @@ export default function User({user, repos}) {
   );
 }
 
-
-export const getStaticPaths = async function(){
- return{
-  paths,
-  fallback: true
- }
-
-}
+export const getStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: true,
+  };
+};
 
 
-export const getStaticProps = async function (context) {
-  const { userName } = context.params;
+export const getStaticProps = async (context) => {
+  const { username } = context.params;
 
-  const [userResponse, reposResponse] = Promise.all([
-    api.get(`/users/${userName}`),
-    api.get(`/users/${userName}/repos`),
-  ]);
+   const userResponse = await api.get(`/users/${username}`)
+   const reposResponse = await api.get(`/users/${username}/repos`)
 
   return {
     props: {
