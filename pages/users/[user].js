@@ -7,7 +7,7 @@ import Menu from "../../components/Menu/menu";
 import styles from "../../styles/User.module.css";
 import Card from "../../components/Card/card";
 
-export default function User() {
+export default function User({user, repos}) {
 
   return (
     <>
