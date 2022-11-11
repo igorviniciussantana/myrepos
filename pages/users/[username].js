@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Header from "../../components/Header/header";
@@ -7,7 +6,7 @@ import styles from "../../styles/User.module.css";
 import Card from "../../components/Card/card";
 import  api  from "../../api/api";
 
-
+import Loading from "../../components/Loading/loading";
 
 
 export default function User({ user, repos }) {
@@ -15,7 +14,7 @@ export default function User({ user, repos }) {
   const { isFallback } = useRouter();
 
   if (isFallback) {
-    return <p>Carregando...</p>;
+    return <Loading/>;
   }
 
 const sortRepos = repos.sort((a,b) => {return new Date(b.updated_at) - new Date(a.updated_at)})

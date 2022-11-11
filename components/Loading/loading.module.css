@@ -1,0 +1,56 @@
+@media screen and (max-width: 600px) {
+  .image {
+    width: 30vw;
+    aspect-ratio: 1/1;
+  }
+  .header p {
+    width: 80vw;
+  }
+  .header p:not(:first-of-type) {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 600px) {
+  .header p {
+    width: 20vw;
+    height: 2vw;
+  }
+  .header p:not(:first-of-type) {
+    width: 10vw;
+  }
+  .image {
+    width: 10vw;
+    aspect-ratio: 1/1;
+  }
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  row-gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.header .image {
+  padding: 8px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  margin-bottom: 4px;
+  transition: 0.5s;
+}
+
+.containerDynamic {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #100f11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerDynamic .cardsDiv {
+  margin-top: 2rem;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}/*# sourceMappingURL=loading.module.css.map */
