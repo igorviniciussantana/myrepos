@@ -74,6 +74,6 @@ export const getStaticProps = async (context) => {
       user: userResponse.data,
       repos: reposResponse.data,
     },
-    revalidate: 20,
+    revalidate: 20
   };
 };
