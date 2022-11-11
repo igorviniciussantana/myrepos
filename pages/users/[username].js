@@ -17,8 +17,7 @@ export default function User({ user, repos }) {
     return <Loading/>;
   }
 
-const sortRepos = repos.sort((a,b) => {return new Date(b.updated_at) - new Date(a.updated_at)})
-console.log(sortRepos.map(repo => new Date(repo.updated_at)))
+const sortRepos = repos.sort((a,b) => {return new Date(b.pushed_at) - new Date(a.pushed_at)})
 
   return (
     <>
