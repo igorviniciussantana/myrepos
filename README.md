@@ -45,7 +45,7 @@ Após os requisitos estarem cumpridos, siga os seguintes passos na sua máquina:
 Clone o projeto
 
 ```bash
-  git clone https://github.com/igorviniciussantana/myrepos
+  git clone https://github.com/igorviniciussantana/myrepos.git
 ```
 
 Entre no diretório do projeto
