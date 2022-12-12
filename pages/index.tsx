@@ -37,7 +37,7 @@ do GitHub"
               mediumSize="5"
               weight="700"
             />
-            <Input placeholder="meu-usuario" change={(ev) => setName(ev)} />
+            <Input placeholder="meu-usuario" change={(ev : string) => setName(ev)} />
             <Button value="Acessar minha página" click={`users/${name}`}/>
           </div>
         </div>
