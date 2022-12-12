@@ -7,7 +7,6 @@ import Input from "../components/Input/input";
 import { useState } from "react";
 
 export default function Home() {
-
   const [name, setName] = useState("");
 
   return (
@@ -29,16 +28,18 @@ export default function Home() {
           <Menu />
           <div className={styles.app}>
             <Text
-              value="Insira seu nome de usuário
-do GitHub"
+              value="Insira seu nome de usuário do GitHub"
               align="center"
               color="white"
               minSize="1.5"
               mediumSize="5"
               weight="700"
             />
-            <Input placeholder="meu-usuario" change={(ev : string) => setName(ev)} />
-            <Button value="Acessar minha página" click={`users/${name}`}/>
+            <Input
+              placeholder="meu-usuario"
+              change={(ev: string) => setName(ev)}
+            />
+            <Button value="Acessar minha página" click={`users/${name}`} />
           </div>
         </div>
       </div>
