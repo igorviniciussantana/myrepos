@@ -5,11 +5,34 @@ import Menu from "../../components/Menu/menu";
 import styles from "../../styles/User.module.css";
 import Card from "../../components/Card/card";
 import  api  from "../../api/api";
-
+import { GetStaticProps } from "next";
 import Loading from "../../components/Loading/loading";
 
 
-export default function User({ user, repos }) {
+interface IUser{
+login: string;
+name: string;
+avatar_url: string;
+}
+
+
+interface IRepos{
+name: string;
+id: number;
+owner: IUser;
+description: string;
+html_url: string;
+topics: string[];
+pushed_at: string;
+}
+
+
+interface UserProps{
+  user: IUser;
+  repos: IRepos[];
+}
+
+export default function User({ user, repos } : UserProps) {
 
   const { isFallback } = useRouter();
 
@@ -17,7 +40,7 @@ export default function User({ user, repos }) {
     return <Loading/>;
   }
 
-const sortRepos = repos.sort((a,b) => {return new Date(b.pushed_at) - new Date(a.pushed_at)})
+const sortRepos = repos.sort((a,b) => {return new Date(b.pushed_at).valueOf() - new Date(a.pushed_at).valueOf()})
 
   return (
     <>
@@ -62,8 +85,8 @@ export const getStaticPaths = async () => {
 };
 
 
-export const getStaticProps = async (context) => {
-  const { username } = context.params;
+export const getStaticProps : GetStaticProps = async (context) => {
+  const username = context.params?.username; 
 
    const userResponse = await api.get(`/users/${username}`)
    const reposResponse = await api.get(`/users/${username}/repos`)
