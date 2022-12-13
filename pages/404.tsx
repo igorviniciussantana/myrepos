@@ -1,8 +1,8 @@
 import styles from "../styles/Error.module.css";
-import Text from "../components/Text/text";
+import Text from "../src/components/Text/text";
 import Head from "next/head";
-import Menu from "../components/Menu/menu";
-import Button from "../components/Button/button";
+import Menu from "../src/components/Menu/menu";
+import Button from "../src/components/Button/button";
 
 export default function Error() {
   return (
