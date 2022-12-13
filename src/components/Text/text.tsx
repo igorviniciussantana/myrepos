@@ -1,11 +1,11 @@
 
 interface TextProps{
-color: string;
-weight: string;
-minSize: number;
-mediumSize: number;
-spacing: number;
-align: any;
+color?: string;
+weight?: string;
+minSize?: string;
+mediumSize?: string;
+spacing?: string;
+align?: any;
 value: string;
 
 }
