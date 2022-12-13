@@ -2,9 +2,16 @@ import styles from "./card.module.css";
 import Text from "../Text/text";
 import Link from "next/link";
 
+export interface CardProps {
+  link: string;
+  title: string;
+  description: string;
+  img: string;
+  login: string;
+  tags: string[];
+}
 
-
-export default function Card(props) {
+export default function Card(props : CardProps) {
   return (
 
       <Link href={props.link}>
