@@ -1,12 +1,14 @@
 import styles from "./header.module.css";
 import Link from "next/link";
 import Text from "../Text/text";
+import { IUser } from "../../interfaces";
 
-export default function Header(props) {
+
+export default function Header(props : IUser) {
   return (
     <div className={styles.header}>
       <Link href={`https://github.com/${props.login}`}>
-        <img src={props.avatar} className={styles.image} />
+        <img src={props.avatar_url} className={styles.image} />
       </Link>
       <Link href={`https://github.com/${props.login}`}>
         <a target="_blank">
