@@ -7,30 +7,9 @@ import Card from "../../src/components/Card/card";
 import  api  from "../../api/api";
 import { GetStaticProps } from "next";
 import Loading from "../../src/components/Loading/loading";
+import { UserProps } from '../../src/interfaces'
 
 
-interface IUser{
-login: string;
-name: string;
-avatar_url: string;
-}
-
-
-interface IRepos{
-name: string;
-id: number;
-owner: IUser;
-description: string;
-html_url: string;
-topics: string[];
-pushed_at: string;
-}
-
-
-interface UserProps{
-  user: IUser;
-  repos: IRepos[];
-}
 
 export default function User({ user, repos } : UserProps) {
 
