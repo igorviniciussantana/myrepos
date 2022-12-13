@@ -1,9 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Text from "../components/Text/text";
-import Menu from "../components/Menu/menu";
-import Button from "../components/Button/button";
-import Input from "../components/Input/input";
+import Text from "../src/components/Text/text";
+import Menu from "../src/components/Menu/menu";
+import Button from "../src/components/Button/button";
+import Input from "../src/components/Input/input";
 import { useState } from "react";
 
 export default function Home() {

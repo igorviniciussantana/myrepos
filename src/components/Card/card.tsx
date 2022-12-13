@@ -3,6 +3,7 @@ import Text from "../Text/text";
 import Link from "next/link";
 
 
+
 export default function Card(props) {
   return (
 
