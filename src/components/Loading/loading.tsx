@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
-import Header from "../../components/Header/header";
-import Menu from "../../components/Menu/menu";
+import Header from "../Header/header";
+import Menu from "../Menu/menu";
 import styles from "./loading.module.css";
-import Card from "../../components/Card/card";
+import Card from "../Card/card";
 import Link from "next/link";
 
 import Skeleton from 'react-loading-skeleton'
