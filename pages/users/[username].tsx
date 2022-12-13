@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
-import Header from "../../components/Header/header";
-import Menu from "../../components/Menu/menu";
+import Header from "../../src/components/Header/header";
+import Menu from "../../src/components/Menu/menu";
 import styles from "../../styles/User.module.css";
-import Card from "../../components/Card/card";
+import Card from "../../src/components/Card/card";
 import  api  from "../../api/api";
 import { GetStaticProps } from "next";
-import Loading from "../../components/Loading/loading";
+import Loading from "../../src/components/Loading/loading";
 
 
 interface IUser{
