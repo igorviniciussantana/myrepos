@@ -35,7 +35,7 @@ const sortRepos = repos.sort((a,b) => {return new Date(b.pushed_at).valueOf() - 
       </Head>
       <div className={styles.containerDynamic}>
         <Menu />
-        <Header avatar={user.avatar_url} name={user.name} login={user.login} />
+        <Header avatar_url={user.avatar_url} name={user.name} login={user.login} />
         <div className={styles.cardsDiv}>
           {sortRepos.map((repo) => {
             return (
