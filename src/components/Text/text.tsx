@@ -1,4 +1,16 @@
-export default function Text(props) {
+
+interface TextProps{
+color: string;
+weight: string;
+minSize: number;
+mediumSize: number;
+spacing: number;
+align: any;
+value: string;
+
+}
+
+export default function Text(props : TextProps) {
   return (
     <span
       style={{
