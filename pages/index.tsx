@@ -39,7 +39,7 @@ export default function Home() {
               placeholder="meu-usuario"
               change={(ev: string) => setName(ev)}
             />
-            <Button value="Acessar minha página" click={`users/${name}`} />
+            <Button value="Acessar minha página" clickRoute={`users/${name}`} />
           </div>
         </div>
       </div>
